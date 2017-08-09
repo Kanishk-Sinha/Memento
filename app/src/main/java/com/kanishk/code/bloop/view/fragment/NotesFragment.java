@@ -23,8 +23,6 @@ import com.kanishk.code.bloop.view.adapter.NotesRecyclerViewAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
-import io.github.kobakei.materialfabspeeddial.FabSpeedDialMenu;
-
 /**
  * Created by kanishk on 18/7/17.
  */
@@ -188,11 +186,6 @@ public class NotesFragment extends Fragment {
         ItemTouchHelper.Callback callback = new SimpleItemTouchHelperCallback(adapter);
         ItemTouchHelper touchHelper = new ItemTouchHelper(callback);
         touchHelper.attachToRecyclerView(recyclerView);
-
-        FabSpeedDialMenu menu = new FabSpeedDialMenu(getContext().getApplicationContext());
-        menu.add("Add a Simple Note").setIcon(R.drawable.ic_bloop_count_black);
-        menu.add("Take an Audio Note").setIcon(R.drawable.ic_microphone);
-        menu.add("Add a picture").setIcon(R.drawable.ic_add_a_photo_black_24dp);
 
         switch (fragType) {
             case 1 :
